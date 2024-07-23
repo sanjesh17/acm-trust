@@ -1,0 +1,43 @@
+:root {
+  font-family: "Switzer", sans-serif;
+}
+
+.navbar-container {
+  display: flex;
+  padding: 1rem 3rem;
+  align-items: center;
+  color: white;
+}
+
+.navbar-logo {
+  margin-right: 60px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-right: auto;
+}
+
+.navbar-links p {
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.nav-btn button {
+  font-family: "General Sans", sans-serif;
+  cursor: pointer;
+  padding: 8px 20px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 15px;
+  background-color: #ffde91;
+  border: none;
+  scale: 1.1;
+  transition: scale 0.2s ease;
+}
+
+.nav-btn button:hover {
+  scale: 1.05;
+}
