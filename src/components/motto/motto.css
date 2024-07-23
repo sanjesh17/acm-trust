@@ -1,0 +1,51 @@
+.motto-container {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  color: white;
+  background-color: #072e22;
+}
+
+.motto-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.motto-header h1 {
+  font-size: 2.5rem;
+}
+
+.motto-content p {
+  text-align: center;
+  font-size: 25px;
+  line-height: 20px;
+}
+
+.motto-header svg {
+  margin-top: -10px;
+  height: 30px;
+}
+
+.motto-content {
+  margin-top: 30px;
+}
+
+.pencil-line {
+  margin: 20px 0;
+  opacity: 0.7;
+}
+
+.pencil-line rect {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 3s linear forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

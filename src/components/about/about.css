@@ -1,0 +1,109 @@
+.about-container {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.head-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head-container svg {
+  margin-top: -10px;
+  height: 30px;
+}
+
+.content-container {
+  margin-top: 30px;
+  padding: 0 3rem;
+  text-align: center;
+}
+
+.content-container p {
+  font-size: 25px;
+  line-height: 20px;
+}
+
+.learn-btn {
+  margin-top: 30px;
+}
+
+.learn-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #ffde91;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.learn-btn button {
+  transition: scale 0.2s ease;
+}
+
+.learn-btn button:hover {
+  scale: 1.05;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-container {
+  text-align: center;
+}
+
+.head-container h1 {
+  font-size: 2.5rem;
+  display: inline-block;
+}
+
+.content-container {
+  text-align: center;
+}
+
+.content-container p {
+  margin-bottom: 10px;
+}
+
+.learn-btn {
+  margin-top: 50px;
+}
+
+.learn-btn button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  background-color: #ffde91;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow-icon {
+  margin-left: 8px;
+  width: 20px;
+  height: 20px;
+}
