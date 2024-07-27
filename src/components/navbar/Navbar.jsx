@@ -32,7 +32,12 @@ const Navbar = () => {
           <p>Contact Us</p>
         </Link>
         <p>Survey</p>
-        <p>Booking</p>
+        <Link
+          to="/booking"
+          style={{ color: "inherit", textDecoration: "none" }}
+        >
+          <p>Booking</p>
+        </Link>
       </div>
       <div className="nav-btn">
         <button type="button">Donate</button>

@@ -1,0 +1,300 @@
+.kaliyampoondi-temple-booking-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 2rem;
+  font-family: "Switzer", sans-serif;
+  background-color: #082f22;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.63);
+  border-radius: 10px;
+}
+
+.kaliyampoondi-booking-header {
+  text-align: center;
+}
+
+.kaliyampoondi-booking-header h1 {
+  color: white;
+  font-size: 24px;
+}
+
+.kaliyampoondi-booking-header svg {
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+.kaliyampoondi-booking-progress {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.kaliyampoondi-progress-step {
+  flex: 1;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #e0e0e0;
+  color: black;
+  position: relative;
+  font-size: 0.9rem;
+  border-radius: 8px;
+}
+
+.kaliyampoondi-progress-step.active {
+  background-color: #4caf50;
+  color: white;
+}
+
+.kaliyampoondi-booking-content {
+  background-color: #093425;
+  color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.kaliyampoondi-booking-step h2 {
+  margin-bottom: 1.5rem;
+  color: white;
+  font-size: 20px;
+}
+
+.kaliyampoondi-temple-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.kaliyampoondi-temple-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.kaliyampoondi-temple-card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.kaliyampoondi-temple-card.selected {
+  background-color: #4caf50;
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+.kaliyampoondi-temple-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 0.5rem;
+}
+
+.kaliyampoondi-input-wrapper,
+.kaliyampoondi-select-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.kaliyampoondi-booking-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.kaliyampoondi-booking-input,
+.kaliyampoondi-booking-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.kaliyampoondi-booking-input:focus,
+.kaliyampoondi-booking-select:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+.kaliyampoondi-date-time-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-right: 2rem;
+}
+
+.kaliyampoondi-date-time-picker .kaliyampoondi-input-wrapper {
+  flex: 1;
+}
+
+.kaliyampoondi-booking-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1em;
+}
+
+.kaliyampoondi-button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.kaliyampoondi-booking-button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.kaliyampoondi-booking-button:first-child {
+  background-color: #f44336;
+  color: white;
+}
+
+.kaliyampoondi-booking-button:last-child {
+  background-color: #4caf50;
+  color: white;
+}
+
+.kaliyampoondi-booking-button:hover {
+  opacity: 0.9;
+}
+
+.kaliyampoondi-booking-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  color: black;
+}
+
+.kaliyampoondi-booking-summary {
+  display: grid;
+  background-color: #082f22;
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  grid-template-columns: 50% 50%;
+}
+
+.kaliyampoondi-booking-summary p {
+  margin-bottom: 0.5rem;
+}
+
+.kaliyampoondi-booking-fee {
+  font-weight: bold;
+  color: #4caf50;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.kaliyampoondi-booking-footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  text-align: center;
+  color: white;
+}
+
+.kaliyampoondi-contact-info h3 {
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.kaliyampoondi-contact-info p {
+  margin: 0.25rem 0;
+}
+
+.kaliyampoondi-details-summary-card {
+  background-color: #f5f5f5;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.kaliyampoondi-ticket-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.kaliyampoondi-ticket-header {
+  border-bottom: 2px dashed #e0e0e0;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+.kaliyampoondi-ticket-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 1.2em;
+}
+
+.kaliyampoondi-ticket-body {
+  position: relative;
+  z-index: 1;
+}
+
+.kaliyampoondi-ticket-detail {
+  font-size: 14px;
+  color: #666;
+  margin: 8px 0;
+}
+
+.kaliyampoondi-ticket-footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+}
+
+.kaliyampoondi-ticket-decoration {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 40px;
+  height: 100%;
+  background: repeating-linear-gradient(
+    45deg,
+    #f5f5f5,
+    #f5f5f5 10px,
+    #fff 10px,
+    #fff 20px
+  );
+}
+
+@media (max-width: 600px) {
+  .kaliyampoondi-ticket-card {
+    padding: 15px;
+  }
+
+  .kaliyampoondi-ticket-detail {
+    font-size: 12px;
+  }
+
+  .kaliyampoondi-booking-fee {
+    font-size: 16px;
+  }
+
+  .kaliyampoondi-date-time-picker {
+    flex-direction: column;
+  }
+
+  .kaliyampoondi-button-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .kaliyampoondi-booking-button {
+    width: 100%;
+  }
+}
