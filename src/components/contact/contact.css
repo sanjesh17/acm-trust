@@ -1,0 +1,140 @@
+.contact-container {
+  color: white;
+  padding: 2rem 3rem;
+}
+
+.details {
+  margin-right: auto;
+}
+
+.details p {
+  margin: 0 0;
+  color: white;
+  font-weight: 600;
+  margin-top: 5px;
+  font-size: 40px;
+}
+
+.details p:nth-child(2) {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+form {
+  margin-top: 20px;
+}
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.name-field {
+  display: flex;
+  gap: 100px;
+  justify-content: space-between;
+}
+
+.name-field input {
+  width: 200px;
+  border: none;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.first-name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.last-name {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.email-field {
+  margin-top: 15px;
+}
+
+.email-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.email-container input {
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.phone-field {
+  margin-top: 15px;
+}
+
+.phone-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.phone-container input {
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+.message-field {
+  margin-top: 15px;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+textarea {
+  resize: none;
+  border-radius: 5px;
+  border: none;
+  font-family: inherit;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.contact-map iframe {
+  border: 0;
+  border-radius: 12px;
+  box-shadow: 0 0 7px rgba(0, 0, 0, 0.628);
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.678);
+  border: none;
+}
+
+.send-button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #ffde91;
+  transition: scale 0.3s ease;
+  height: 40px;
+  border: none;
+}
+
+.send-button:hover {
+  scale: 1.01;
+}
+
+label {
+  font-weight: 600;
+}
