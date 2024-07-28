@@ -298,3 +298,120 @@
     width: 100%;
   }
 }
+
+@media (max-width: 1200px) {
+  .kaliyampoondi-temple-booking-container {
+    padding: 1.5rem;
+  }
+
+  .kaliyampoondi-booking-header h1 {
+    font-size: 22px;
+  }
+
+  .kaliyampoondi-booking-progress {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kaliyampoondi-progress-step {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .kaliyampoondi-temple-grid {
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .kaliyampoondi-booking-summary {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .kaliyampoondi-details-summary-card {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .kaliyampoondi-temple-booking-container {
+    padding: 1rem;
+  }
+
+  .kaliyampoondi-booking-header h1 {
+    font-size: 20px;
+  }
+
+  .kaliyampoondi-booking-content {
+    padding: 1.5rem;
+  }
+
+  .kaliyampoondi-booking-step h2 {
+    font-size: 18px;
+  }
+
+  .kaliyampoondi-booking-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .kaliyampoondi-details-summary-card {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .kaliyampoondi-temple-booking-container {
+    padding: 0.5rem;
+  }
+
+  .kaliyampoondi-booking-header h1 {
+    font-size: 18px;
+  }
+
+  .kaliyampoondi-booking-content {
+    padding: 1rem;
+  }
+
+  .kaliyampoondi-booking-step h2 {
+    font-size: 16px;
+  }
+
+  .kaliyampoondi-temple-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .kaliyampoondi-date-time-picker {
+    flex-direction: column;
+  }
+
+  .kaliyampoondi-button-group {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .kaliyampoondi-booking-button {
+    width: 100%;
+  }
+
+  .kaliyampoondi-booking-summary {
+    grid-template-columns: 1fr;
+  }
+
+  .kaliyampoondi-details-summary-card {
+    margin-top: 1rem;
+  }
+
+  .kaliyampoondi-ticket-card {
+    padding: 15px;
+  }
+
+  .kaliyampoondi-ticket-detail {
+    font-size: 12px;
+  }
+
+  .kaliyampoondi-booking-fee {
+    font-size: 16px;
+  }
+}

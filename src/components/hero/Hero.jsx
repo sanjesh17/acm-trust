@@ -8,6 +8,7 @@ import img2 from "../../assets/banner-2.jpg";
 import img3 from "../../assets/banner-3.jpg";
 import withFadeInAnimation from "../../hooks/withFadeInAnimation";
 import "../../hooks/fadeinanimation.css";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   const settings = {
@@ -39,7 +40,9 @@ const Hero = () => {
               with your donation.
             </p>
             <div className="hero-btn">
-              <button type="button">Contact Us</button>
+              <Link to="/contact">
+                <button type="button">Contact Us</button>
+              </Link>
             </div>
           </div>
         </div>

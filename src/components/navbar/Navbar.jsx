@@ -23,7 +23,9 @@ const Navbar = () => {
   return (
     <div className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-logo">
-        <h3>Logo</h3>
+        <Link to="/home" style={{ color: "inherit", textDecoration: "none" }}>
+          <h3>Logo</h3>
+        </Link>
       </div>
       <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
         <Link to="/home" style={{ color: "inherit", textDecoration: "none" }}>

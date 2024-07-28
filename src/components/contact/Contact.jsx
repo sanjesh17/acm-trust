@@ -56,9 +56,9 @@ const Contact = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31145.970924280708!2d79.69877749280228!3d12.631836286974247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52dff28f4bfb21%3A0x7a8d84a5e9e60a84!2sKaliyampoondi%2C%20Tamil%20Nadu%20603402!5e0!3m2!1sen!2sin!4v1722097881723!5m2!1sen!2sin"
             width="100%"
             height="100%"
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
           ></iframe>
         </div>
       </div>
