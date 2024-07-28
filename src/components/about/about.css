@@ -4,6 +4,7 @@
   flex-direction: column;
   align-items: center;
   color: white;
+  padding: 0 1rem;
 }
 
 .head-container {
@@ -19,13 +20,13 @@
 
 .content-container {
   margin-top: 30px;
-  padding: 0 3rem;
+  padding: 0 2rem;
   text-align: center;
 }
 
 .content-container p {
-  font-size: 25px;
-  line-height: 20px;
+  font-size: 1.25rem;
+  line-height: 1.5;
 }
 
 .learn-btn {
@@ -41,7 +42,8 @@
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
 }
 
 .arrow-icon {
@@ -50,60 +52,64 @@
   height: 20px;
 }
 
-.learn-btn button {
-  transition: scale 0.2s ease;
-}
-
 .learn-btn button:hover {
-  scale: 1.05;
+  transform: scale(1.05);
 }
 
 .btn-box {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.head-container {
-  text-align: center;
 }
 
 .head-container h1 {
   font-size: 2.5rem;
-  display: inline-block;
-}
-
-.content-container {
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
 .content-container p {
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
-.learn-btn {
-  margin-top: 50px;
+@media (max-width: 768px) {
+  .content-container {
+    padding: 0 1rem;
+  }
+
+  .content-container p {
+    font-size: 1.125rem;
+  }
+
+  .learn-btn button {
+    padding: 8px 16px;
+    font-size: 0.875rem;
+  }
+
+  .head-container svg {
+    height: 20px;
+  }
 }
 
-.learn-btn button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 20px;
-  background-color: #ffde91;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 18px;
-}
+@media (max-width: 480px) {
+  .head-container svg {
+    height: 20px;
+  }
 
-.btn-box {
-  display: flex;
-  justify-content: center;
-}
+  .head-container h1 {
+    font-size: 2rem;
+  }
 
-.arrow-icon {
-  margin-left: 8px;
-  width: 20px;
-  height: 20px;
+  .content-container {
+    padding: 0 0.5rem;
+  }
+
+  .content-container p {
+    font-size: 1rem;
+  }
+
+  .learn-btn button {
+    padding: 6px 12px;
+    font-size: 0.75rem;
+  }
 }

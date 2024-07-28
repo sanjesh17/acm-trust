@@ -35,7 +35,6 @@ const About = () => {
           initiatives.
         </p>
         <div className="btn-box">
-          {" "}
           <div className="learn-btn">
             <button type="button">
               Learn More
