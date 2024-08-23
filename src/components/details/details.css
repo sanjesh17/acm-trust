@@ -1,0 +1,94 @@
+.detail-page-container {
+  padding: 1rem 3rem;
+}
+
+.detail-image-container img {
+  object-fit: cover;
+  height: 900px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
+}
+
+.detail-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.detail-content-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.detail-content-container svg {
+  margin-top: -10px;
+}
+
+.detail-content-container h1 {
+  color: white;
+}
+
+.detail-information-container {
+  margin-top: 20px;
+  font-size: 20px;
+  padding: 30px;
+  background-color: #072e22;
+  border-radius: 20px;
+}
+
+.faq-section {
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #093425;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+  padding: 15px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item h3 {
+  margin: 0;
+  font-size: 25px;
+  color: white;
+  position: relative;
+}
+
+.faq-item p {
+  margin: 0;
+  margin-top: 10px;
+  font-size: 20px;
+  color: white;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+.faq-item.active p {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.faq-item h3::after {
+  content: "\002B"; /* Plus sign */
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #ffde91;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active h3::after {
+  transform: rotate(45deg); /* Turns the plus into an X */
+}

@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+.survey-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #093425;
+  padding: 20px;
+}
+
+.survey-form {
+  font-family: "Poppins", sans-serif;
+  background-color: #072e22;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 20px;
+}
+
+.survey-form h2 {
+  color: white;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 24px;
+}
+
+.survey-form__field {
+  margin-bottom: 20px;
+}
+
+.survey-form__label {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  color: white;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.survey-form__input,
+.survey-form__select {
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background-color: #093425;
+  color: white;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.survey-form__input:focus,
+.survey-form__select:focus {
+  border-color: #ffd67a;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 214, 122, 0.3);
+}
+
+.survey-form__select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23FFD67A%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 10px top 50%;
+  background-size: 12px auto;
+  padding-right: 30px;
+}
+
+.survey-form__navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.survey-form__button {
+  background-color: #ffd67a;
+  color: #072e22;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.1s;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.survey-form__button:hover {
+  background-color: #f6c962;
+}
+
+.survey-form__button:active {
+  transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+  .survey-form {
+    padding: 20px;
+  }
+
+  .survey-form h2 {
+    font-size: 20px;
+  }
+
+  .survey-form__button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+  .survey-form__label {
+    font-size: 12px;
+  }
+
+  .survey-form__input,
+  .survey-form__select {
+    font-size: 12px;
+    padding: 8px;
+  }
+}
+
+.survey-form__input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) sepia(100%) saturate(10000%) hue-rotate(300deg);
+}
+
+.survey-form__input::placeholder,
+.survey-form__select::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.survey-form__input:invalid,
+.survey-form__select:invalid {
+  border-color: #ff6b6b;
+}
+
+.survey-form__input:invalid:focus,
+.survey-form__select:invalid:focus {
+  box-shadow: 0 0 0 2px rgba(255, 107, 107, 0.3);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .survey-form * {
+    transition: none !important;
+  }
+}
+
+.survey-form :focus:not(:focus-visible) {
+  outline: none;
+}
+
+.survey-form :focus-visible {
+  outline: 2px solid #ffd67a;
+  outline-offset: 2px;
+}

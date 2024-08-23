@@ -37,7 +37,9 @@ const Navbar = () => {
         >
           <p>Contact Us</p>
         </Link>
-        <p>Survey</p>
+        <Link to="/survey" style={{ color: "inherit", textDecoration: "none" }}>
+          <p>Survey</p>
+        </Link>
         <Link
           to="/booking"
           style={{ color: "inherit", textDecoration: "none" }}

@@ -26,18 +26,19 @@ const Hero = () => {
       <div className="main-container">
         <div className="text-container">
           <div className="header">
-            <h2>VILLAGE WELFARE DEVELOPMENT TRUST</h2>
-            <h1>Be the change</h1>
-            <h1>you wish to see.</h1>
+            <h2>KALIYAMPOONDI VILLAGE DEVELOPMENT TRUST</h2>
+            <h1>Empowering Communities,</h1>
+            <h1>Reviving Traditions.</h1>
           </div>
           <div className="tagline">
             <p>
-              Behind every statistic is a real person waiting for help. Your
-              support directly impacts lives,
+              Our village stands as a testament to the power of unity and
+              service, driven by the shared vision of a prosperous community.
             </p>
             <p>
-              providing hope and tangible solutions. Make a difference today
-              with your donation.
+              Join us in our mission to restore Kaliyampoondi's legacy as a
+              model village through sustainable development and collective
+              action.
             </p>
             <div className="hero-btn">
               <Link to="/contact">
@@ -49,13 +50,13 @@ const Hero = () => {
         <div className="image-container">
           <Slider {...settings}>
             <div>
-              <img src={img1} alt="Charity 1" />
+              <img src={img1} alt="Kaliyampoondi Village" />
             </div>
             <div>
-              <img src={img2} alt="Charity 2" />
+              <img src={img2} alt="Community Development" />
             </div>
             <div>
-              <img src={img3} alt="Charity 3" />
+              <img src={img3} alt="Sustainable Growth" />
             </div>
           </Slider>
         </div>

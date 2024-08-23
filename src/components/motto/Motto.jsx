@@ -24,14 +24,14 @@ const Motto = () => {
       </div>
       <div className="motto-content">
         <p>
-          To revive and continue the legacy of excellence in rural development
-          that Kaliyampoondi
+          We envision Kaliyampoondi as a model village that revives and
+          continues its legacy of excellence in rural development.
         </p>
         <p>
-          village once achieved, aiming to regain its status as a "Modern
-          Village" (சிறந்த கிராமம்)
+          Guided by the spirit of self-reliance and community service, we aim to
+          restore our village to its former glory, once recognized as a "Modern
+          Village" by both central and state governments.
         </p>
-        <p> recognized by both central and state governments.</p>
 
         <svg
           className="pencil-line"
