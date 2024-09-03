@@ -8,6 +8,7 @@ import SurveyPage from "./pages/SurveyPage/SurveyPage";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import PrivateRoute from "./components/protectedroute/ProtectedRoute";
 import UserRoute from "./components/userroute/UserRoute";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
 
 function App() {
   return (
@@ -39,6 +40,14 @@ function App() {
             element={
               <UserRoute>
                 <AuthPage />
+              </UserRoute>
+            }
+          />
+          <Route
+            path="/auth/register"
+            element={
+              <UserRoute>
+                <RegisterPage />
               </UserRoute>
             }
           />
