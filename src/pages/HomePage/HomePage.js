@@ -6,8 +6,11 @@ import About from "../../components/about/About";
 import Motto from "../../components/motto/Motto";
 import GalleryCarousel from "../../components/gallery/GalleryCarousel";
 import Footer from "../../components/footer/Footer";
+import useTitle from "../../hooks/useTitle";
 
 const HomePage = () => {
+  useTitle("Home | VDWT");
+  
   return (
     <div className="bg-container">
       <Navbar />

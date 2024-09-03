@@ -74,6 +74,34 @@
   display: none;
 }
 
+.nav-btn {
+  display: flex;
+  align-items: center;
+}
+
+.logout-icon {
+  cursor: pointer;
+  margin-left: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-icon svg {
+  fill: white;
+  transition: transform 0.2s ease;
+}
+
+.logout-icon:hover svg {
+  transform: scale(1.1);
+}
+
+.donlog-mobile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 @media screen and (max-width: 768px) {
   body,
   html {
@@ -94,8 +122,8 @@
     background-color: rgba(7, 46, 34, 0.95);
     transition: right 0.3s ease;
     justify-content: center;
-    align-items: center; /* Center items vertically */
-    z-index: 999; /* Ensure it overlays other elements */
+    align-items: center;
+    z-index: 999;
   }
 
   .navbar-links.open {
@@ -107,14 +135,16 @@
   }
 
   .nav-btn.mobile {
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-top: 20px;
   }
 
   .menu-toggle {
     display: block;
     cursor: pointer;
-    z-index: 1001; /* Ensure it's above the menu */
+    z-index: 1001;
   }
 
   .hamburger {
@@ -159,6 +189,10 @@
 
   .hero-btn {
     margin-bottom: 20px;
+  }
+
+  .logout-icon {
+    margin-left: 10px;
   }
 }
 

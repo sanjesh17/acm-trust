@@ -1,20 +1,20 @@
 import React from "react";
-import "./contactpage.css";
+import "./AuthPage.css";
+import Login from "../../components/auth/Login";
 import Navbar from "../../components/navbar/Navbar";
-import Contact from "../../components/contact/Contact";
 import Footer from "../../components/footer/Footer";
 import useTitle from "../../hooks/useTitle";
 
-const ContactPage = () => {
-  useTitle("Contact | VDWT");
+const AuthPage = () => {
+  useTitle("Auth | VDWT");
   
   return (
     <div className="bg-container">
       <Navbar />
-      <Contact />
+      <Login />
       <Footer />
     </div>
   );
 };
 
-export default ContactPage;
+export default AuthPage;
