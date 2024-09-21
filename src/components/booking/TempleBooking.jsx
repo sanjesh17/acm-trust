@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./templebooking.css";
 import withFadeInAnimation from "../../hooks/withFadeInAnimation";
 import "../../hooks/fadeinanimation.css";
+import axios from "axios";
 
 const TempleBooking = () => {
   const [step, setStep] = useState(1);
@@ -87,7 +88,15 @@ const TempleBooking = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(booking);
+    axios
+      .post("https://acmback.onrender.com/tickets/add", booking)
+      .then((response) => {
+        alert("Ticket Has Been Booked Successfully!");
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const nextStep = () => setStep(step + 1);
@@ -194,15 +203,20 @@ const TempleBooking = () => {
                 <label className="kaliyampoondi-booking-label" htmlFor="time">
                   Time
                 </label>
-                <input
+                <select
                   className="kaliyampoondi-booking-input"
-                  type="time"
                   id="time"
                   name="time"
                   value={booking.time}
                   onChange={handleChange}
                   required
-                />
+                >
+                  <option value="" disabled>
+                    Select time
+                  </option>
+                  <option value="08:00">08:00 AM - 09:00 AM</option>
+                  <option value="18:00">06:30 PM - 07:30 PM</option>
+                </select>
               </div>
             </div>
             <div className="kaliyampoondi-button-group">
@@ -385,7 +399,7 @@ const TempleBooking = () => {
 
         {step === 4 && (
           <div className="kaliyampoondi-booking-step">
-            <h2>Confirm Booking</h2>
+            <h2 onClick={handleSubmit}>Confirm Booking</h2>
             <div className="kaliyampoondi-booking-summary">
               <div className="kaliyampoondi-details-book">
                 <p>
@@ -438,7 +452,7 @@ const TempleBooking = () => {
                       <strong>Purpose:</strong> {booking.purpose}
                     </p>
                     <p className="kaliyampoondi-booking-fee">
-                      Booking Fee: <span>₹500</span>
+                      Booking Fee: <span>₹1000</span>
                     </p>
                   </div>
                   <div className="kaliyampoondi-ticket-footer">

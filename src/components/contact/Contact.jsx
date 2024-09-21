@@ -8,8 +8,16 @@ const Contact = () => {
     <div className="contact-container">
       <div className="contact-content">
         <div className="details">
-          <p>Contact Us,</p>
-          <p>Get in Touch 👋</p>
+          <div className="con-container">
+            <div className="con-left-container">
+              <p>Contact Us,</p>
+              <p>Get in Touch 👋</p>
+            </div>
+            <div className="con-right-container">
+              <p style={{ color: "#ffde91" }}>9159757660</p>
+              <h3>sample@gmail.com</h3>
+            </div>
+          </div>
           <form>
             <div className="name-field">
               <div className="first-name">

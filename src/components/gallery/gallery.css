@@ -5,6 +5,11 @@
   padding: 40px 20px;
 }
 
+.gallery-wrapper {
+  width: 100%;
+  background-color: #072e22;
+}
+
 .gallery-header {
   display: flex;
   flex-direction: column;

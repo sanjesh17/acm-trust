@@ -29,31 +29,33 @@ const GalleryCarousel = () => {
   };
 
   return (
-    <div className="gallery-carousel">
-      <div className="gallery-header">
-        <h1>Gallery</h1>
-        <svg
-          width="462"
-          height="35"
-          viewBox="0 0 462 35"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M1 20C260.2 -5.6 415.667 4.66667 461 13M55 32C314.2 6.4 388.667 4.66667 434 13"
-            stroke="#FFDE91"
-            strokeWidth="6"
-          />
-        </svg>
-      </div>
-      <div className="slider-container">
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div key={index} className="slide-item">
-              <img src={image} alt={`Gallery image ${index + 1}`} />
-            </div>
-          ))}
-        </Slider>
+    <div className="gallery-wrapper">
+      <div className="gallery-carousel">
+        <div className="gallery-header">
+          <h1>Gallery</h1>
+          <svg
+            width="462"
+            height="35"
+            viewBox="0 0 462 35"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1 20C260.2 -5.6 415.667 4.66667 461 13M55 32C314.2 6.4 388.667 4.66667 434 13"
+              stroke="#FFDE91"
+              strokeWidth="6"
+            />
+          </svg>
+        </div>
+        <div className="slider-container">
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <div key={index} className="slide-item">
+                <img src={image} alt={`Gallery ${index + 1}`} />
+              </div>
+            ))}
+          </Slider>
+        </div>
       </div>
     </div>
   );

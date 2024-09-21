@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../../components/navbar/Navbar";
 import Footer from "../../components/footer/Footer";
-import Survey from "../../components/survey/Survey";
+import Report from "../../components/report/Report";
 import useTitle from "../../hooks/useTitle";
 
 const SurveyPage = () => {
@@ -10,7 +10,7 @@ const SurveyPage = () => {
   return (
     <div className="bg-container">
       <Navbar />
-      <Survey />
+      <Report />
       <Footer />
     </div>
   );

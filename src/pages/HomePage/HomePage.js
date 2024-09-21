@@ -7,15 +7,17 @@ import Motto from "../../components/motto/Motto";
 import GalleryCarousel from "../../components/gallery/GalleryCarousel";
 import Footer from "../../components/footer/Footer";
 import useTitle from "../../hooks/useTitle";
+import MultiCarousel from "../../components/events/Events";
 
 const HomePage = () => {
   useTitle("Home | VDWT");
-  
+
   return (
     <div className="bg-container">
       <Navbar />
       <Hero />
       <QuoteCard />
+      <MultiCarousel />
       <About />
       <Motto />
       <GalleryCarousel />

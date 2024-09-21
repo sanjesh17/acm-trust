@@ -135,6 +135,19 @@ input {
   scale: 1.01;
 }
 
+.con-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.con-right-container {
+  color: #ffde91;
+}
+
+.con-container h3 {
+  margin: 0;
+}
+
 label {
   font-weight: 600;
 }
