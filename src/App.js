@@ -9,8 +9,28 @@ import AuthPage from "./pages/AuthPage/AuthPage";
 import PrivateRoute from "./components/protectedroute/ProtectedRoute";
 import UserRoute from "./components/userroute/UserRoute";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import AdminPage from "./pages/AdminPage/AdminPage";
+import AdminSurvey from "./pages/AdminSurvey/AdminSurvey";
+import React, { useState, useEffect, useCallback } from "react";
 
 function App() {
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  const checkAdminStatus = useCallback(() => {
+    const role = localStorage.getItem("role");
+    setIsAdmin(role === "admin");
+  }, []);
+
+  useEffect(() => {
+    checkAdminStatus();
+
+    window.addEventListener("userLoginStatusChanged", checkAdminStatus);
+
+    return () => {
+      window.removeEventListener("userLoginStatusChanged", checkAdminStatus);
+    };
+  }, [checkAdminStatus]);
+
   return (
     <div>
       <BrowserRouter>
@@ -30,9 +50,13 @@ function App() {
           <Route
             path="/survey"
             element={
-              <PrivateRoute>
-                <SurveyPage />
-              </PrivateRoute>
+              isAdmin ? (
+                <AdminSurvey />
+              ) : (
+                <PrivateRoute>
+                  <SurveyPage />
+                </PrivateRoute>
+              )
             }
           />
           <Route
@@ -48,6 +72,14 @@ function App() {
             element={
               <UserRoute>
                 <RegisterPage />
+              </UserRoute>
+            }
+          />
+          <Route
+            path="/auth/admin"
+            element={
+              <UserRoute>
+                <AdminPage />
               </UserRoute>
             }
           />

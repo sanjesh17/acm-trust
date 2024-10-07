@@ -34,6 +34,8 @@ const SignUp = () => {
 
       if (response.ok) {
         localStorage.setItem("token", data.token);
+        localStorage.setItem("role", "user");
+        window.dispatchEvent(new Event("userLoginStatusChanged"));
         setTimeout(() => {
           navigate("/home");
         }, 1000);

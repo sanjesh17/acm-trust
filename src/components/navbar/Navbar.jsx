@@ -24,6 +24,8 @@ const Navbar = () => {
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
+    localStorage.removeItem("role");
+    window.dispatchEvent(new Event("userLoginStatusChanged"));
     window.location.reload();
   };
 
