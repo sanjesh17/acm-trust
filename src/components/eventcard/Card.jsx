@@ -1,7 +1,7 @@
 import React from "react";
 import "./card.css";
 
-const Card = () => {
+const Card = ({ event }) => {
   return (
     <div className="card-wrapper">
       <div className="flip-card">
@@ -10,19 +10,18 @@ const Card = () => {
             <img src="/api/placeholder/320/400" alt="Event" />
           </div>
           <div className="flip-card-back">
-            <h2>Kaaliamman Kovil Thiruvizha</h2>
+            <h2>{event.eventName}</h2>
             <p>
-              <strong>Date:</strong> September 15, 2024
+              <strong>Date:</strong> {event.eventDate}
             </p>
             <p>
-              <strong>Time:</strong> 7:00 PM - 10:00 PM
+              <strong>Time:</strong> {event.eventTime}
             </p>
             <p>
-              <strong>Location:</strong> Kaliamman Temple, Kaliyampoondi
+              <strong>Location:</strong> {event.eventLocation}
             </p>
             <p>
-              <strong>Description:</strong> Join us for the grand festival of
-              the year
+              <strong>Description:</strong> {event.eventDescription}
             </p>
             <button className="register-button">Register Now</button>
           </div>

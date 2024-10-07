@@ -8,8 +8,25 @@ import GalleryCarousel from "../../components/gallery/GalleryCarousel";
 import Footer from "../../components/footer/Footer";
 import useTitle from "../../hooks/useTitle";
 import MultiCarousel from "../../components/events/Events";
+import { useState, useCallback, useEffect } from "react";
 
 const HomePage = () => {
+  const [isAdmin, setIsAdmin] = useState(false);
+
+  const checkAdminStatus = useCallback(() => {
+    const role = localStorage.getItem("role");
+    setIsAdmin(role === "admin");
+  }, []);
+
+  useEffect(() => {
+    checkAdminStatus();
+
+    window.addEventListener("userLoginStatusChanged", checkAdminStatus);
+
+    return () => {
+      window.removeEventListener("userLoginStatusChanged", checkAdminStatus);
+    };
+  }, [checkAdminStatus]);
   useTitle("Home | VDWT");
 
   return (
@@ -17,7 +34,7 @@ const HomePage = () => {
       <Navbar />
       <Hero />
       <QuoteCard />
-      <MultiCarousel />
+      <MultiCarousel isAdmin={isAdmin} />
       <About />
       <Motto />
       <GalleryCarousel />

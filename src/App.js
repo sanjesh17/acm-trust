@@ -11,6 +11,7 @@ import UserRoute from "./components/userroute/UserRoute";
 import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
 import AdminSurvey from "./pages/AdminSurvey/AdminSurvey";
+import EventPage from "./pages/EventPage/EventPage";
 import React, { useState, useEffect, useCallback } from "react";
 
 function App() {
@@ -49,15 +50,7 @@ function App() {
           <Route path="/details" element={<DetailPage />} />
           <Route
             path="/survey"
-            element={
-              isAdmin ? (
-                <AdminSurvey />
-              ) : (
-                <PrivateRoute>
-                  <SurveyPage />
-                </PrivateRoute>
-              )
-            }
+            element={isAdmin ? <AdminSurvey /> : <SurveyPage />}
           />
           <Route
             path="/auth"
@@ -81,6 +74,14 @@ function App() {
               <UserRoute>
                 <AdminPage />
               </UserRoute>
+            }
+          />
+          <Route
+            path="/add-event"
+            element={
+              <PrivateRoute>
+                <EventPage />
+              </PrivateRoute>
             }
           />
         </Routes>

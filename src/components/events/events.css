@@ -44,3 +44,33 @@
 .react-multi-carousel-dot--active button {
   background: #333;
 }
+
+.events-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.add-event-button-container {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.add-event-button {
+  font-family: "Poppins", sans-serif;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #ffde91;
+  color: black;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: scale 0.3s ease;
+  font-weight: 500;
+}
+
+.add-event-button:hover {
+  scale: 1.05;
+}
