@@ -23,7 +23,6 @@ const Card = ({ event }) => {
             <p>
               <strong>Description:</strong> {event.eventDescription}
             </p>
-            <button className="register-button">Register Now</button>
           </div>
         </div>
       </div>

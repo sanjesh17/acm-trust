@@ -79,7 +79,9 @@ const Navbar = () => {
         </div>
       </div>
       <div className="nav-btn desktop">
-        <button type="button">Donate</button>
+        <Link to="/donate">
+          <button type="button">Donate</button>
+        </Link>
         {isAuthenticated && (
           <div className="logout-icon" title="Logout" onClick={handleLogOut}>
             <svg

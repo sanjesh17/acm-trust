@@ -142,6 +142,13 @@ input {
 
 .con-right-container {
   color: #ffde91;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.email-contact-text {
+  font-size: 20px;
 }
 
 .con-container h3 {

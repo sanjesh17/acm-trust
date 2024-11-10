@@ -5,7 +5,7 @@
 .main-container {
   display: grid;
   grid-template-columns: 60% 40%;
-  padding: 2rem 3rem;
+  padding: 3rem 3rem;
 }
 
 .text-container h1 {
@@ -13,10 +13,6 @@
   color: white;
   font-size: 60px;
   line-height: 1.2;
-}
-
-.header {
-  padding-top: 10%;
 }
 
 .header h2 {

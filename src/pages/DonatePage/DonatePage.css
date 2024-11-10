@@ -1,0 +1,7 @@
+.donation-container {
+  display: flex;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+  margin: 8rem 0;
+}

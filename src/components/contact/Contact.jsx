@@ -15,9 +15,11 @@ const Contact = () => {
             </div>
             <div className="con-right-container">
               <p style={{ color: "#ffde91" }}>9159757660</p>
-              <h3>sample@gmail.com</h3>
             </div>
           </div>
+          <h3 className="email-contact-text" style={{ color: "#ffde91" }}>
+            kpdvillagedevelopmenttrust@gmail.com
+          </h3>
           <form>
             <div className="name-field">
               <div className="first-name">

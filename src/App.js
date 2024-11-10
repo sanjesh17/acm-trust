@@ -12,7 +12,9 @@ import RegisterPage from "./pages/RegisterPage/RegisterPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
 import AdminSurvey from "./pages/AdminSurvey/AdminSurvey";
 import EventPage from "./pages/EventPage/EventPage";
+import PaymentPage from "./pages/PaymentPage/PaymentPage";
 import React, { useState, useEffect, useCallback } from "react";
+import DonatePage from "./pages/DonatePage/DonatePage";
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -76,6 +78,11 @@ function App() {
               </UserRoute>
             }
           />
+          <Route path="/payment" element={<PaymentPage />} />
+          <Route
+            path="/payment/anonymous"
+            element={<PaymentPage paymentType="hidden" />}
+          />
           <Route
             path="/add-event"
             element={
@@ -84,6 +91,7 @@ function App() {
               </PrivateRoute>
             }
           />
+          <Route path="/donate" element={<DonatePage />} />
         </Routes>
       </BrowserRouter>
     </div>

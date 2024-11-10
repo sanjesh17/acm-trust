@@ -91,7 +91,9 @@ const TempleBooking = () => {
     axios
       .post("https://acmback.onrender.com/tickets/add", booking)
       .then((response) => {
-        alert("Ticket Has Been Booked Successfully!");
+        alert(
+          "Ticket Has Been Booked Successfully and Confirmation SMS has been sent!"
+        );
         console.log(response.data);
       })
       .catch((error) => {
