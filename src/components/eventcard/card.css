@@ -69,18 +69,19 @@
   font-size: 14px;
 }
 
-.register-button {
-  background-color: #ffde91;
-  color: black;
+
+.delete-btn {
+  background: #ff4444;
+  color: white;
   border: none;
+  width: max-content;
+  margin: 10px auto;
   padding: 8px 16px;
-  margin-top: 12px;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  font-size: 14px;
+  transition: all ease 0.2s;
 }
 
-.register-button:hover {
-  background-color: #ffd67a;
+.delete-btn:hover {
+  background: #cc0000;
 }

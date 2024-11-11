@@ -6,6 +6,7 @@ import Card from "../eventcard/Card";
 import "./events.css";
 import withFadeInAnimation from "../../hooks/withFadeInAnimation";
 import "../../hooks/fadeinanimation.css";
+import Loader from "../loader/Loader";
 
 const MultiCarousel = ({ isAdmin }) => {
   const [events, setEvents] = useState([]);
@@ -67,7 +68,7 @@ const MultiCarousel = ({ isAdmin }) => {
     navigate("/add-event");
   };
 
-  if (isLoading) return <div>Loading events...</div>;
+  if (isLoading) return <Loader />;
   if (error) return <div>Error: {error}</div>;
   if (!events) return <div>No events data available.</div>;
   if (events.length === 0 && !isAdmin) return <div>No events available at the moment.</div>;

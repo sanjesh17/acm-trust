@@ -11,6 +11,7 @@ import {
 } from "chart.js";
 import { Pie, Bar, Doughnut } from "react-chartjs-2";
 import "./report.css";
+import FullScreenLoader from "../fullscreenloader/FullScreenLoader";
 
 ChartJS.register(
   ArcElement,
@@ -45,7 +46,6 @@ const Report = () => {
       });
   }, []);
 
-  if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
 
   const countOccurrences = (arr) =>
@@ -180,6 +180,7 @@ const Report = () => {
 
   return (
     <div className="survey-statistics-dashboard">
+      {loading && <FullScreenLoader />}
       <div className="stat-header">
         <h1>Village Survey Statistics</h1>
         <svg

@@ -1,11 +1,15 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./templebooking.css";
 import withFadeInAnimation from "../../hooks/withFadeInAnimation";
 import "../../hooks/fadeinanimation.css";
+import FullScreenLoader from "../fullscreenloader/FullScreenLoader";
 import axios from "axios";
 
 const TempleBooking = () => {
+  const navigate = useNavigate();
   const [step, setStep] = useState(1);
+  const [loading, setLoading] = useState(false);
   const [booking, setBooking] = useState({
     temple: "",
     date: "",
@@ -88,6 +92,7 @@ const TempleBooking = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true); 
     axios
       .post("https://acmback.onrender.com/tickets/add", booking)
       .then((response) => {
@@ -98,6 +103,10 @@ const TempleBooking = () => {
       })
       .catch((error) => {
         console.log(error);
+      })
+      .finally(() => {
+        setLoading(false);
+        navigate(0);
       });
   };
 
@@ -106,6 +115,7 @@ const TempleBooking = () => {
 
   return (
     <div className="kaliyampoondi-temple-booking-container">
+      {loading && <FullScreenLoader />}
       <div className="kaliyampoondi-booking-header">
         <h1>Kaliyampoondi Village Temples Archana Booking</h1>
         <svg

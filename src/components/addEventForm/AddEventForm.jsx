@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./addeventform.css";
+import FullScreenLoader from "../fullscreenloader/FullScreenLoader";
 
 const AddEventPage = () => {
   const navigate = useNavigate();
@@ -58,6 +59,7 @@ const AddEventPage = () => {
 
   return (
     <div className="add-event-page">
+      {loading && <FullScreenLoader />}
       <h1>Add New Event</h1>
       {error && <p className="error-message">{error}</p>}
       <form onSubmit={handleSubmit}>
