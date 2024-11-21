@@ -22,7 +22,7 @@ const Login = () => {
       const response = await fetch("https://acmback.onrender.com/api/login", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({ email, password }),
       });

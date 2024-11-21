@@ -5,11 +5,13 @@ import withFadeInAnimation from "../../hooks/withFadeInAnimation";
 import "../../hooks/fadeinanimation.css";
 import FullScreenLoader from "../fullscreenloader/FullScreenLoader";
 import axios from "axios";
+import emailjs from "emailjs-com";
 
 const TempleBooking = () => {
   const navigate = useNavigate();
   const [step, setStep] = useState(1);
   const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState("");
   const [booking, setBooking] = useState({
     temple: "",
     date: "",
@@ -92,21 +94,55 @@ const TempleBooking = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setLoading(true); 
+    setLoading(true);
+
+    const dynamicFormData = {
+      recipient_name: booking.name,
+      company_name: "Kaliyampoondi Village Development Trust",
+      email_body: `Thank you, ${booking.name}, for booking a visit to ${booking.temple} on ${booking.date} at ${booking.time}. Keep supporting the Kaliyampoondi Village Development Trust.`,
+      action_text: "Donate",
+      action_url: "https://acm-trust.vercel.app/donate",
+      contact_email: "kpdvillagedevelopmenttrust@gmail.com",
+      current_year: new Date().getFullYear(),
+      to_email: booking.email,
+    };
+
     axios
       .post("https://acmback.onrender.com/tickets/add", booking)
       .then((response) => {
         alert(
-          "Ticket Has Been Booked Successfully and Confirmation SMS has been sent!"
+          "Ticket Has Been Booked Successfully and Confirmation Email and SMS has been sent!"
         );
         console.log(response.data);
+        emailjs
+          .send(
+            "service_zcs0bg2", // Replace with your EmailJS service ID
+            "template_x5yzam3", // Replace with your EmailJS template ID
+            dynamicFormData,
+            "7svxwXsjGc9yCmrAd" // Replace with your EmailJS public key
+          )
+          .then(
+            (response) => {
+              console.log(
+                "Email sent successfully!",
+                response.status,
+                response.text
+              );
+              setStatus("Email sent successfully!");
+              navigate(0);
+            },
+            (error) => {
+              console.error("Failed to send email:", error);
+              setStatus("Failed to send email. Please try again.");
+              alert("Email not sent!");
+            }
+          );
       })
       .catch((error) => {
         console.log(error);
       })
       .finally(() => {
         setLoading(false);
-        navigate(0);
       });
   };
 
