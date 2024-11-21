@@ -15,6 +15,7 @@ import EventPage from "./pages/EventPage/EventPage";
 import PaymentPage from "./pages/PaymentPage/PaymentPage";
 import React, { useState, useEffect, useCallback } from "react";
 import DonatePage from "./pages/DonatePage/DonatePage";
+import AdminDashboard from "./pages/AdminDashboard/AdminDashboard";
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -88,6 +89,14 @@ function App() {
             element={
               <PrivateRoute>
                 <EventPage />
+              </PrivateRoute>
+            }
+          />
+          <Route
+            path="/admin-dashboard"
+            element={
+              <PrivateRoute>
+                <AdminDashboard />
               </PrivateRoute>
             }
           />

@@ -21,6 +21,7 @@ const Navbar = () => {
   };
 
   const isAuthenticated = !!localStorage.getItem("token");
+  const userRole = localStorage.getItem("role");
 
   const handleLogOut = () => {
     localStorage.removeItem("token");
@@ -55,6 +56,14 @@ const Navbar = () => {
         >
           <p>Booking</p>
         </Link>
+        {userRole === "admin" && (
+          <Link
+            to="/admin-dashboard"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            <p>Admin Dashboard</p>
+          </Link>
+        )}
         <div className="nav-btn mobile">
           <button type="button">Donate</button>
           {isAuthenticated && (

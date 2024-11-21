@@ -23,19 +23,23 @@ const MultiCarousel = ({ isAdmin }) => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
+        console.log(data);
         if (Array.isArray(data.events)) {
           setEvents(data.events);
         } else if (Array.isArray(data)) {
           setEvents(data);
         } else {
           console.error("Unexpected data format:", data);
-          throw new Error("Received data is not in the expected format. Check console for details.");
+          throw new Error(
+            "Received data is not in the expected format. Check console for details."
+          );
         }
       } catch (err) {
         console.error("Error fetching events:", err);
         setError(err.message);
       } finally {
         setIsLoading(false);
+        console.log(events);
       }
     };
 
@@ -43,7 +47,10 @@ const MultiCarousel = ({ isAdmin }) => {
   }, []);
 
   const getEventImage = (event) => {
-    return event.image || 'https://via.placeholder.com/300x200?text=No+Image+Available';
+    return (
+      event.image ||
+      "https://via.placeholder.com/300x200?text=No+Image+Available"
+    );
   };
 
   const responsive = {
@@ -71,7 +78,8 @@ const MultiCarousel = ({ isAdmin }) => {
   if (isLoading) return <Loader />;
   if (error) return <div>Error: {error}</div>;
   if (!events) return <div>No events data available.</div>;
-  if (events.length === 0 && !isAdmin) return <div>No events available at the moment.</div>;
+  if (events.length === 0 && !isAdmin)
+    return <div>No events available at the moment.</div>;
 
   return (
     <div className="events-section">
@@ -111,7 +119,7 @@ const MultiCarousel = ({ isAdmin }) => {
         >
           {events.map((event) => (
             <div key={event._id}>
-              <Card event={{...event, image: getEventImage(event)}} />
+              <Card event={{ ...event, image: getEventImage(event) }} />
             </div>
           ))}
         </Carousel>
