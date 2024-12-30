@@ -22,6 +22,14 @@
   align-items: center;
 }
 
+.navbar-logo img {
+  transition: transform 0.2s ease;
+}
+
+.navbar-logo img:hover {
+  transform: scale(1.1);
+}
+
 .navbar-logo h3 {
   cursor: pointer;
   margin: 0;
