@@ -23,7 +23,6 @@ const MultiCarousel = ({ isAdmin }) => {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-        console.log(data);
         if (Array.isArray(data.events)) {
           setEvents(data.events);
         } else if (Array.isArray(data)) {
@@ -39,7 +38,6 @@ const MultiCarousel = ({ isAdmin }) => {
         setError(err.message);
       } finally {
         setIsLoading(false);
-        console.log(events);
       }
     };
 
