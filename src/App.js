@@ -16,6 +16,7 @@ import PaymentPage from "./pages/PaymentPage/PaymentPage";
 import React, { useState, useEffect, useCallback } from "react";
 import DonatePage from "./pages/DonatePage/DonatePage";
 import AdminDashboard from "./pages/AdminDashboard/AdminDashboard";
+import NotFoundPage from "./pages/404Page/NotFoundPage";
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -39,8 +40,9 @@ function App() {
     <div>
       <BrowserRouter>
         <Routes>
-          <Route index element={<HomePage />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
+          <Route path="*" element={<NotFoundPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route
             path="/booking"

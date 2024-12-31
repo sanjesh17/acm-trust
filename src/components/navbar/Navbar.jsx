@@ -35,7 +35,7 @@ const Navbar = () => {
     <div className={`navbar-container ${scrolled ? "scrolled" : ""}`}>
       <div className="navbar-logo">
         <Link to="/home" style={{ color: "inherit", textDecoration: "none" }}>
-          <img src={Logo} alt="" style={{ width: "40px",  }} />
+          <img src={Logo} alt="" style={{ width: "40px" }} />
         </Link>
       </div>
       <div className={`navbar-links ${menuOpen ? "open" : ""}`}>
@@ -66,7 +66,9 @@ const Navbar = () => {
           </Link>
         )}
         <div className="nav-btn mobile">
-          <button type="button">Donate</button>
+          <Link to="/donate">
+            <button type="button">Donate</button>
+          </Link>
           {isAuthenticated && (
             <div className="donlog-mobile-container">
               <div
