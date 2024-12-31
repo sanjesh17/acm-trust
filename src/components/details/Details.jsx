@@ -101,8 +101,9 @@ const Details = () => {
     <div className="detail-page-container">
       <div className="detail-page">
         <div className="detail-content-container">
-          <h1>The Story of Kaliyampoondi</h1>
+          <h1 className="detail-title">The Story of Kaliyampoondi</h1>
           <svg
+            className="detail-svg"
             width="462"
             height="35"
             viewBox="0 0 462 35"
@@ -117,7 +118,7 @@ const Details = () => {
           </svg>
         </div>
         <div className="detail-image-container">
-          <img src={dimage} alt="Detail" />
+          <img className="detail-image" src={dimage} alt="Detail" />
         </div>
         <div className="detail-information-container">
           <div className="faq-section">
@@ -127,8 +128,8 @@ const Details = () => {
                 onClick={() => toggleFAQ(index)}
                 key={index}
               >
-                <h3>{item.question}</h3>
-                <p>{item.answer}</p>
+                <h3 className="faq-question">{item.question}</h3>
+                <p className="faq-answer">{item.answer}</p>
               </div>
             ))}
           </div>

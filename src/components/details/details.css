@@ -1,17 +1,18 @@
+/* Desktop styles remain unchanged */
 .detail-page-container {
   padding: 1rem 3rem;
-}
-
-.detail-image-container img {
-  object-fit: cover;
-  height: 900px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px black;
 }
 
 .detail-image-container {
   display: flex;
   justify-content: center;
+}
+
+.detail-image-container .detail-image {
+  object-fit: cover;
+  height: 900px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px black;
 }
 
 .detail-content-container {
@@ -21,11 +22,11 @@
   margin-bottom: 20px;
 }
 
-.detail-content-container svg {
+.detail-content-container .detail-svg {
   margin-top: -10px;
 }
 
-.detail-content-container h1 {
+.detail-content-container .detail-title {
   color: white;
 }
 
@@ -56,14 +57,15 @@
   border-bottom: none;
 }
 
-.faq-item h3 {
+.faq-item .faq-question {
   margin: 0;
   font-size: 25px;
   color: white;
   position: relative;
+  padding-right: 30px;
 }
 
-.faq-item p {
+.faq-item .faq-answer {
   margin: 0;
   margin-top: 10px;
   font-size: 20px;
@@ -74,13 +76,13 @@
   transition: max-height 0.5s ease, opacity 0.5s ease;
 }
 
-.faq-item.active p {
+.faq-item.active .faq-answer {
   max-height: 200px;
   opacity: 1;
 }
 
-.faq-item h3::after {
-  content: "\002B"; /* Plus sign */
+.faq-item .faq-question::after {
+  content: "\002B";
   font-size: 20px;
   position: absolute;
   right: 0;
@@ -89,6 +91,84 @@
   transition: transform 0.3s ease;
 }
 
-.faq-item.active h3::after {
-  transform: rotate(45deg); /* Turns the plus into an X */
+.faq-item.active .faq-question::after {
+  transform: rotate(45deg);
+}
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+  .detail-page-container {
+    padding: 1rem;
+  }
+
+  .detail-image-container .detail-image {
+    height: 400px;
+    width: 100%;
+  }
+
+  .detail-content-container .detail-title {
+    font-size: 24px;
+    text-align: center;
+  }
+
+  .detail-content-container .detail-svg {
+    width: 240px;
+    height: auto;
+  }
+
+  .detail-information-container {
+    padding: 15px;
+    margin-top: 15px;
+  }
+
+  .faq-section {
+    padding: 10px;
+  }
+
+  .faq-item .faq-question {
+    font-size: 18px;
+    line-height: 1.4;
+    padding-right: 25px;
+  }
+
+  .faq-item .faq-answer {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .faq-item .faq-question::after {
+    font-size: 18px;
+    top: 2px;
+  }
+}
+
+/* Additional styles for very small screens */
+@media screen and (max-width: 480px) {
+  .detail-page-container {
+    padding: 0.5rem;
+  }
+
+  .detail-image-container .detail-image {
+    height: 300px;
+  }
+
+  .detail-content-container .detail-title {
+    font-size: 20px;
+  }
+
+  .detail-information-container {
+    padding: 10px;
+  }
+
+  .faq-section {
+    padding: 8px;
+  }
+
+  .faq-item .faq-question {
+    font-size: 16px;
+  }
+
+  .faq-item .faq-answer {
+    font-size: 14px;
+  }
 }

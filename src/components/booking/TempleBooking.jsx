@@ -116,10 +116,10 @@ const TempleBooking = () => {
         console.log(response.data);
         emailjs
           .send(
-            "service_zcs0bg2", // Replace with your EmailJS service ID
-            "template_x5yzam3", // Replace with your EmailJS template ID
+            "service_zcs0bg2",
+            "template_x5yzam3",
             dynamicFormData,
-            "7svxwXsjGc9yCmrAd" // Replace with your EmailJS public key
+            "7svxwXsjGc9yCmrAd"
           )
           .then(
             (response) => {

@@ -274,146 +274,274 @@
   );
 }
 
-@media (max-width: 600px) {
-  .kaliyampoondi-ticket-card {
-    padding: 15px;
-  }
-
-  .kaliyampoondi-ticket-detail {
-    font-size: 12px;
-  }
-
-  .kaliyampoondi-booking-fee {
-    font-size: 16px;
-  }
-
-  .kaliyampoondi-date-time-picker {
-    flex-direction: column;
-  }
-
-  .kaliyampoondi-button-group {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .kaliyampoondi-booking-button {
-    width: 100%;
-  }
-}
-
 @media (max-width: 1200px) {
   .kaliyampoondi-temple-booking-container {
+    margin: 2rem auto;
     padding: 1.5rem;
+    width: 95%;
   }
 
   .kaliyampoondi-booking-header h1 {
     font-size: 22px;
+    line-height: 1.3;
   }
 
   .kaliyampoondi-booking-progress {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
+    gap: 0.75rem;
   }
 
   .kaliyampoondi-progress-step {
     margin-bottom: 0.5rem;
-    width: 100%;
-    text-align: center;
+    padding: 0.75rem;
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 992px) {
   .kaliyampoondi-temple-grid {
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.25rem;
+  }
+
+  .kaliyampoondi-booking-content {
+    padding: 1.75rem;
   }
 
   .kaliyampoondi-booking-summary {
     grid-template-columns: 1fr;
-    gap: 1rem;
+    gap: 1.5rem;
+    padding: 1.25rem;
   }
 
-  .kaliyampoondi-details-summary-card {
-    margin-top: 0;
+  .kaliyampoondi-temple-card img {
+    height: 180px;
+  }
+
+  .kaliyampoondi-booking-label {
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .kaliyampoondi-temple-booking-container {
+    margin: 1rem 0.5rem;
     padding: 1rem;
+    width: auto;
   }
 
   .kaliyampoondi-booking-header h1 {
-    font-size: 20px;
+    font-size: 1.25rem;
+    padding: 0 0.5rem;
+    line-height: 1.4;
+  }
+
+  .kaliyampoondi-booking-header svg {
+    width: 240px;
+    height: auto;
+    margin-bottom: 2rem;
+  }
+
+  .kaliyampoondi-booking-progress {
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 0.5rem;
+  }
+
+  .kaliyampoondi-progress-step {
+    width: 100%;
+    margin: 0;
+    padding: 0.75rem 0.5rem;
+    font-size: 0.9rem;
   }
 
   .kaliyampoondi-booking-content {
-    padding: 1.5rem;
+    padding: 1rem 0.75rem;
+    margin: 0.5rem 0;
   }
 
   .kaliyampoondi-booking-step h2 {
-    font-size: 18px;
-  }
-
-  .kaliyampoondi-booking-summary {
-    grid-template-columns: 1fr;
-  }
-
-  .kaliyampoondi-details-summary-card {
-    margin-top: 1rem;
-  }
-}
-
-@media (max-width: 600px) {
-  .kaliyampoondi-temple-booking-container {
-    padding: 0.5rem;
-  }
-
-  .kaliyampoondi-booking-header h1 {
-    font-size: 18px;
-  }
-
-  .kaliyampoondi-booking-content {
-    padding: 1rem;
-  }
-
-  .kaliyampoondi-booking-step h2 {
-    font-size: 16px;
+    font-size: 1.125rem;
+    margin-bottom: 1rem;
   }
 
   .kaliyampoondi-temple-grid {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .kaliyampoondi-temple-card {
+    padding: 0.75rem;
+  }
+
+  .kaliyampoondi-temple-card img {
+    height: 180px;
   }
 
   .kaliyampoondi-date-time-picker {
-    flex-direction: column;
-  }
-
-  .kaliyampoondi-button-group {
-    flex-direction: column;
+    padding-right: 0;
     gap: 1rem;
   }
 
-  .kaliyampoondi-booking-button {
-    width: 100%;
+  .kaliyampoondi-input-wrapper,
+  .kaliyampoondi-select-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .kaliyampoondi-booking-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.375rem;
+  }
+
+  .kaliyampoondi-booking-input,
+  .kaliyampoondi-booking-select {
+    padding: 0.625rem;
+    font-size: 1rem;
+    height: 42px;
   }
 
   .kaliyampoondi-booking-summary {
     grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1.5rem;
+    margin: 1rem 0;
   }
 
-  .kaliyampoondi-details-summary-card {
-    margin-top: 1rem;
+  .kaliyampoondi-details-book p {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    word-break: break-word;
   }
 
   .kaliyampoondi-ticket-card {
-    padding: 15px;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  .kaliyampoondi-ticket-header h3 {
+    font-size: 1.1rem;
   }
 
   .kaliyampoondi-ticket-detail {
-    font-size: 12px;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+    word-break: break-word;
   }
 
   .kaliyampoondi-booking-fee {
-    font-size: 16px;
+    font-size: 1.1rem;
+    margin-top: 0.75rem;
+  }
+
+  .kaliyampoondi-button-group {
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .kaliyampoondi-booking-button {
+    width: 100%;
+    padding: 0.75rem;
+    font-size: 1rem;
+    height: 42px;
+  }
+
+  .kaliyampoondi-booking-footer {
+    padding: 1rem 0.5rem;
+    margin-top: 1rem;
+  }
+
+  .kaliyampoondi-contact-info h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .kaliyampoondi-contact-info p {
+    font-size: 0.9rem;
+    margin: 0.25rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .kaliyampoondi-temple-booking-container {
+    margin: 0.5rem 0.25rem;
+    padding: 0.75rem;
+  }
+
+  .kaliyampoondi-booking-header h1 {
+    font-size: 1.1rem;
+  }
+
+  .kaliyampoondi-booking-content {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .kaliyampoondi-booking-step h2 {
+    font-size: 1rem;
+  }
+
+  .kaliyampoondi-temple-card img {
+    height: 160px;
+  }
+
+  .kaliyampoondi-booking-label {
+    font-size: 0.875rem;
+  }
+
+  .kaliyampoondi-booking-input,
+  .kaliyampoondi-booking-select {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+    height: 40px;
+  }
+
+  .kaliyampoondi-booking-summary {
+    padding: 0.75rem;
+  }
+
+  .kaliyampoondi-ticket-card {
+    padding: 0.75rem;
+  }
+
+  .kaliyampoondi-booking-button {
+    padding: 0.625rem;
+    height: 40px;
+  }
+}
+
+@media (max-width: 360px) {
+  .kaliyampoondi-temple-booking-container {
+    margin: 0.25rem;
+    padding: 0.5rem;
+  }
+
+  .kaliyampoondi-booking-header h1 {
+    font-size: 1rem;
+  }
+
+  .kaliyampoondi-progress-step {
+    font-size: 0.8rem;
+    padding: 0.625rem 0.375rem;
+  }
+
+  .kaliyampoondi-temple-card img {
+    height: 140px;
+  }
+
+  .kaliyampoondi-booking-input,
+  .kaliyampoondi-booking-select {
+    font-size: 0.875rem;
+    height: 38px;
+  }
+
+  .kaliyampoondi-details-book p,
+  .kaliyampoondi-ticket-detail {
+    font-size: 0.875rem;
+  }
+
+  .kaliyampoondi-booking-button {
+    font-size: 0.9rem;
+    height: 38px;
   }
 }

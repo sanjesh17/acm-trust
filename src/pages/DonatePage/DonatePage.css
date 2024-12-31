@@ -5,3 +5,70 @@
   align-items: center;
   margin: 8rem 0;
 }
+
+/* Mobile responsiveness for DonatePage */
+@media (max-width: 768px) {
+  .donation-container {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 4rem 1rem;
+  }
+
+  .card {
+    width: 180px;
+    height: 280px;
+  }
+
+  .circle {
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle:after {
+    width: 90px;
+    height: 90px;
+  }
+
+  .card p {
+    font-size: 16px;
+  }
+
+  .overlay {
+    width: 250px;
+    height: 100px;
+    top: 60px;
+    left: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .donation-container {
+    margin: 3rem 0.5rem;
+  }
+
+  .card {
+    width: 150px;
+    height: 240px;
+  }
+
+  .circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .circle:after {
+    width: 70px;
+    height: 70px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .overlay {
+    width: 80px;
+    height: 80px;
+    top: 50px;
+    left: 30px;
+  }
+}
