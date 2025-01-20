@@ -88,7 +88,7 @@ const Footer = () => {
       </div>
       <div className="footer-bottom">
         <p>
-          &copy; 2024 Village Welfare Development Trust. All rights reserved.
+          &copy; 2025 Village Welfare Development Trust. All rights reserved.
         </p>
       </div>
     </footer>

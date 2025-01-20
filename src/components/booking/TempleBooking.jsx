@@ -101,10 +101,21 @@ const TempleBooking = () => {
       company_name: "Kaliyampoondi Village Development Trust",
       email_body: `Thank you, ${booking.name}, for booking a visit to ${booking.temple} on ${booking.date} at ${booking.time}. Keep supporting the Kaliyampoondi Village Development Trust.`,
       action_text: "Donate",
-      action_url: "https://acm-trust.vercel.app/donate",
+      action_url: "https://www.kpdvillagedevelopmenttrust.com/donate",
       contact_email: "kpdvillagedevelopmenttrust@gmail.com",
       current_year: new Date().getFullYear(),
       to_email: booking.email,
+    };
+
+    const dynamicFormDataAdmin = {
+      recipient_name: booking.name,
+      company_name: "Kaliyampoondi Village Development Trust",
+      email_body: `Dear Admin, ${booking.name} of phone ${booking.mobile} has booked a visit to ${booking.temple} on ${booking.date} at ${booking.time}. Please verify and update the customer regarding this.`,
+      action_text: "Donate",
+      action_url: "https://www.kpdvillagedevelopmenttrust.com/donate",
+      contact_email: "kpdvillagedevelopmenttrust@gmail.com",
+      current_year: new Date().getFullYear(),
+      to_email: "kpdvillagedevelopmenttrust@gmail.com",
     };
 
     axios
@@ -116,7 +127,7 @@ const TempleBooking = () => {
         console.log(response.data);
         emailjs
           .send(
-            "service_zcs0bg2",
+            "service_xhbz1dj",
             "template_x5yzam3",
             dynamicFormData,
             "7svxwXsjGc9yCmrAd"
@@ -135,6 +146,25 @@ const TempleBooking = () => {
               console.error("Failed to send email:", error);
               setStatus("Failed to send email. Please try again.");
               alert("Email not sent!");
+            }
+          );
+        emailjs
+          .send(
+            "service_zcs0bg2",
+            "template_x5yzam3",
+            dynamicFormDataAdmin,
+            "7svxwXsjGc9yCmrAd"
+          )
+          .then(
+            (response) => {
+              console.log(
+                "Admin email sent successfully!",
+                response.status,
+                response.text
+              );
+            },
+            (error) => {
+              console.error("Failed to send admin email:", error);
             }
           );
       })
