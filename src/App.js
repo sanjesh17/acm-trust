@@ -16,7 +16,6 @@ import PaymentPage from "./pages/PaymentPage/PaymentPage";
 import React, { useState, useEffect, useCallback } from "react";
 import DonatePage from "./pages/DonatePage/DonatePage";
 import AdminDashboard from "./pages/AdminDashboard/AdminDashboard";
-import NotFoundPage from "./pages/404Page/NotFoundPage";
 
 function App() {
   const [isAdmin, setIsAdmin] = useState(false);
@@ -42,7 +41,28 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
-          <Route path="*" element={<NotFoundPage />} />
+          <Route
+            path="*"
+            element={
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  height: "100vh",
+                  fontSize: "2rem",
+                  flexDirection: "column",
+                }}
+              >
+                <h1 style={{ margin: "0px", fontWeight: "medium" }}>
+                  OOPS, Page not found
+                </h1>
+                <h1 style={{ margin: "0px", fontWeight: "normal" }}>
+                  Error: 404
+                </h1>
+              </div>
+            }
+          />
           <Route path="/contact" element={<ContactPage />} />
           <Route
             path="/booking"
