@@ -3,6 +3,7 @@ import "./survey.css";
 import withFadeInAnimation from "../../hooks/withFadeInAnimation";
 import "../../hooks/fadeinanimation.css";
 import axios from "axios";
+import FullScreenLoader from "../fullscreenloader/FullScreenLoader";
 
 const Survey = () => {
   const [formData, setFormData] = useState({
@@ -67,6 +68,7 @@ const Survey = () => {
     surveyDate: "",
   });
 
+  const [loading, setLoading] = useState(false);
   const [currentStep, setCurrentStep] = useState(1);
 
   const handleChange = (e) => {
@@ -75,12 +77,14 @@ const Survey = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoading(true);
     axios
       .post("https://acmback.onrender.com/forms/add", formData)
-      .then(console.log("Form Submitted Successfully"))
+      .then(setLoading(false))
       .catch((error) => {
         console.error(error);
-      });
+      })
+      .finally(alert("Form submitted successfully!"));
   };
 
   const nextStep = () => {
@@ -138,6 +142,7 @@ const Survey = () => {
 
   return (
     <div className="survey-page-container">
+      {loading && <FullScreenLoader />}
       <div className="survey-header-container">
         <h1>Survey Form</h1>
         <svg
